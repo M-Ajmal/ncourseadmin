@@ -1,0 +1,148 @@
+:root {
+  --white-color: #ffffff;
+  --red-color: #e63946;
+  --dark-red-color: #d62839;
+  --third-color: #333333;
+  --eee-color: #f0f0f0;
+  --light-gray: #f8f8f8;
+  --main-radius: 8px;
+  --secondary-radius: 10px;
+  --fourth-padding: 8px; /* Reduced padding */
+  --fifth-padding: 4px;   /* Reduced padding */
+  --third-margin: 10px;   /* Reduced margin */
+  --secondary-padding: 12px; /* Reduced padding */
+}
+
+/* Main content */
+.main-content {
+  padding: var(--secondary-padding);
+}
+
+/* Title Styles */
+.title {
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center vertically */
+  justify-content: flex-start; /* Align to the left */
+  margin-bottom: var(--third-margin); /* Add some margin below the title */
+}
+
+.title h1 {
+  margin: 0; /* Remove default margin from h1 */
+  font-size: 1.8rem; /* Adjust font size as needed */
+}
+
+/* Main Boxes */
+.main-content .Std-main-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--secondary-padding);
+}
+
+/* Card Styles */
+.main-content .Std-main-boxes .Std-box-card {
+  width: 250px; /* Reduced width for smaller cards */
+  padding: var(--fourth-padding) var(--secondary-padding);
+  background-color: var(--white-color);
+  border-radius: var(--secondary-radius);
+  position: relative; /* Make the card a positioning context */
+  border: 1px solid var(--eee-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  transition: transform 0.3s, box-shadow 0.3s; /* Add transition for hover effect */
+}
+
+@media (max-width: 991px) {
+  .main-content .Std-main-boxes .Std-box-card {
+    width: 60%; /* Adjust width for smaller screens */
+  }
+}
+
+@media (max-width: 767px) {
+  .main-content .Std-main-boxes .Std-box-card {
+    width: 100%; /* Full width for mobile */
+  }
+}
+
+/* Card Info Styles */
+.main-content .Std-main-boxes .Std-box-card .Std-box-card-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--fifth-padding);
+  padding-bottom: var(--secondary-padding);
+  border-bottom: 1px solid var(--eee-color);
+  background-color: var(--light-gray); /* Background color for better contrast */
+  border-radius: var(--secondary-radius); /* Rounded corners */
+}
+
+.main-content .Std-main-boxes .Std-box-card .Std-box-card-info img {
+  width: 80px; /* Reduced image size */
+  height: 80px; /* Reduced image size */
+  margin-bottom: var(--third-margin);
+  border-radius: var(--main-radius);
+}
+
+.main-content .Std-main-boxes .Std-box-card .Std-box-card-info h4 {
+  font-size: 1.2rem; /* Smaller font size */
+}
+
+/* Card Body Styles */
+.main-content .Std-main-boxes .Std-box-card .Std-box-card-body {
+  padding: var(--fifth-padding) 0;
+  border-bottom: 1px solid var(--eee-color);
+  position: relative;
+}
+
+.main-content .Std-main-boxes .Std-box-card .Std-box-card-body ul {
+  font-size: 0.8rem; /* Smaller font size for list items */
+}
+
+.main-content .Std-main-boxes .Std-box-card .Std-box-card-body ul li {
+  display: flex;
+  align-items: center;
+  gap: var(--fourth-padding);
+  margin: var(--fourth-margin) 0;
+}
+
+/* Card Footer Styles */
+.main-content .Std-main-boxes .Std-box-card .Std-box-card-footer {
+  font-size: 0.8rem; /* Smaller footer font size */
+  padding: var(--third-padding) 0 var(--fourth-padding);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-content .Std-main-boxes .Std-box-card .Std-box-card-footer p {
+  color: var(--third-color);
+}
+
+/* Delete Icon Styles */
+.delete-icon {
+  position: absolute;
+  top: 10px; /* Adjust the position */
+  right: 10px; /* Adjust the position */
+  cursor: pointer; /* Change cursor on hover */
+  color: var(--white-color); /* Color of the icon */
+  font-size: 1rem; /* Smaller icon size */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Animation for hover effect */
+
+  /* Styling for the circular background */
+  background-color: var(--red-color); /* Background color for the delete icon */
+  border-radius: 50%; /* Make it circular */
+  width: 30px; /* Set width for the circle */
+  height: 30px; /* Set height for the circle */
+  display: flex; /* Center icon */
+  justify-content: center; /* Center icon */
+  align-items: center; /* Center icon */
+}
+
+.delete-icon:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+  background-color: var(--dark-red-color); /* Change color on hover */
+}
+
+/* Card Hover Effect */
+.Std-box-card:hover {
+  transform: translateY(-5px); /* Raise card on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deepen shadow on hover */
+}

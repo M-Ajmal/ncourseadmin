@@ -1,0 +1,732 @@
+/* Main content styling */
+.main-content {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.title h1 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.switch-icon {
+  font-size: 24px;
+  cursor: pointer;
+  color: #4caf50;
+  margin-left: 10px;
+}
+
+.switch-icon:hover {
+  color: #45a049;
+}
+
+.view-toggle-button {
+  display: flex;
+  align-items: center;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.view-toggle-button i {
+  margin-right: 10px; /* Spacing between icon and text */
+}
+
+.view-toggle-button:hover {
+  background-color: #45a049;
+}
+/* Card container */
+.card-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows cards to wrap to the next line */
+  max-height: 400px; /* Set a max height for the container */
+  overflow-y: auto; /* Enables vertical scrolling */
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+  padding: 10px; /* Optional: add padding for aesthetics */
+  background-color: #ffffff; /* Dark background color for the container */
+  border: 2px solid #bebebe; /* White border color for contrast */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+  transition: box-shadow 0.3s; /* Smooth shadow transition */
+}
+
+.card-container:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5); /* Deeper shadow on hover */
+}
+
+.card-container::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Background of the scrollbar track */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.card-container::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.card-container::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color of the scrollbar thumb on hover */
+}
+
+.category-card {
+  flex: 0 0 calc(25% - 20px); /* Adjusts card width to fit 4 cards per row */
+  margin: 10px; /* Space between cards */
+  border: 1px solid #ccc; /* Optional: add border to cards */
+  border-radius: 8px; /* Optional: round the corners of cards */
+  overflow: hidden; /* Prevents overflowing content */
+  transition: transform 0.2s; /* Optional: add a hover effect */
+  background: linear-gradient(
+    135deg,
+    #74ebd5,
+    #acb6e5
+  ); /* Colorful gradient background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for a 3D effect */
+}
+
+.category-card:hover {
+  transform: scale(1.05); /* Optional: enlarge on hover */
+}
+
+.image-container img {
+  width: 100%; /* Make image responsive */
+  border-top-left-radius: 8px; /* Round top corners */
+  border-top-right-radius: 8px; /* Round top corners */
+}
+
+.icon-buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px; /* Padding for icon buttons */
+}
+
+.icon-btn {
+  background: #ffffff; /* Background color for buttons */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Round button corners */
+  padding: 5px; /* Padding for buttons */
+  cursor: pointer; /* Change cursor on hover */
+  transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.icon-btn:hover {
+  background: #e0e0e0; /* Light background on hover */
+}
+
+.category-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 250px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-10px);
+}
+
+.category-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.category-card h2 {
+  font-size: 20px;
+  margin: 10px 0;
+  font-weight: 600;
+}
+
+.category-card p {
+  font-size: 14px;
+  color: #555;
+}
+/* Action buttons */
+.action-btn {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  margin: 2px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.action-btn.edit-btn {
+  background-color: #2196f3;
+}
+
+.action-btn.delete-btn {
+  background-color: #f44336;
+}
+
+.action-btn i {
+  margin-right: 4px;
+}
+
+.action-btn:hover {
+  opacity: 0.85;
+}
+
+/* Add Category Button */
+.add-category-button {
+  display: flex;
+  align-items: center;
+  background-color: #0d47a1; /* Dark blue color */
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin-right: 10px;
+  border: none; /* Removed border */
+}
+
+.add-category-button i {
+  margin-right: 10px;
+}
+
+.add-category-button:hover {
+  background-color: #09429b; /* Slightly darker blue on hover */
+}
+
+/* Modal Background */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 400px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Modal Title */
+.modal-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Modal Input */
+.modal-input {
+  margin-bottom: 20px;
+}
+
+/* Modal Buttons */
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Modal input and buttons */
+.modal-content input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.modal-content input[type="file"] {
+  margin: 10px 0;
+}
+
+.modal-content .image-preview img {
+  max-width: 100px;
+  margin: 10px 0;
+}
+
+.action-btn.add-btn {
+  background-color: #4caf50;
+  color: white;
+  margin-top: 20px;
+}
+
+.action-btn.cancel-btn {
+  background-color: #f44336;
+  color: white;
+  margin-top: 10px;
+}
+
+.action-btn:hover {
+  opacity: 0.9;
+}
+
+/* Image Preview Styling */
+.image-preview {
+  width: 120px; /* Width of the image preview */
+  height: 120px; /* Height of the image preview */
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
+  background-color: #f9f9f9; /* Background color */
+  position: relative;
+}
+
+/* The transparent rectangle at the bottom */
+.bottom-box {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30px; /* Height of the bottom rectangle */
+  background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #fff; /* Top border for contrast */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+.demo-animation {
+  animation: slideDemo 2s ease-in-out infinite alternate !important;
+}
+
+
+@keyframes slideDemo {
+  0% {
+    transform: translateX(-30px); /* Start further left */
+  }
+  100% {
+    transform: translateX(10px); /* Move slightly right */
+  }
+}
+
+/* Styles for the sliding icon */
+.slide-to-remove {
+  width: 30px;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 18px;
+}
+
+.slide-to-remove:hover {
+  background-color: rgba(255, 0, 0, 0.7);
+  color: white;
+}
+
+.custom-file-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: #007bff; /* Bootstrap primary color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.custom-file-button:hover {
+  background-color: #0056b3; /* Darker shade for hover effect */
+}
+
+.custom-file-button i {
+  margin-right: 5px; /* Space between icon and text */
+}
+
+.category-id-text {
+  margin-top: 10px; /* Add space between the title and the Category ID */
+  margin-bottom: 15px; /* Add space below the Category ID */
+}
+
+.error-message {
+  background-color: #ff4c4c; /* Bright red for visibility */
+  color: white;
+  border-radius: 8px;
+  padding: 10px; /* Reduced padding */
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  animation: slideIn 0.5s ease-in-out;
+}
+
+.error-icon {
+  font-size: 20px; /* Slightly smaller icon */
+  margin-right: 10px; /* Reduced margin */
+}
+
+.error-content {
+  flex-grow: 1;
+}
+
+.error-text {
+  font-size: 14px; /* Smaller font size */
+  font-weight: 500;
+}
+
+.close-btn {
+  background-color: #f9c74f; /* Bright yellow for high visibility */
+  border: none;
+  border-radius: 50%; /* Circular button */
+  color: #333; /* Dark text for contrast */
+  font-size: 16px; /* Smaller font size */
+  padding: 5px; /* Compact padding */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s; /* Smooth transition */
+}
+
+.close-btn:hover {
+  background-color: #f9b24d; /* Darker yellow on hover */
+  transform: scale(1.1); /* Slightly larger on hover */
+}
+
+/* Animations */
+@keyframes slideIn {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Individual card styles */
+
+/* Image container for each card */
+.category-card .image-container {
+  position: relative;
+}
+
+/* Styling for the category image */
+.category-card .image-container img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Icon button container for edit and delete (now inside a box) */
+.category-card .icon-buttons {
+  position: absolute;
+  top: -10px; /* Adjust positioning */
+  right: -10px; /* Adjust positioning to align with top-right corner */
+  display: flex;
+  gap: 5px; /* Small gap between buttons */
+  padding: 10px;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Light semi-transparent background */
+  border-radius: 12px; /* Rounded corners for the box */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  z-index: 10; /* Ensure the icons are above the image */
+}
+
+/* Unique delete button styling */
+.category-card .icon-btn.delete-btn {
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  color: rgba(255, 0, 0, 0.8); /* Red for delete */
+  padding: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.category-card .icon-btn.delete-btn:hover {
+  color: rgba(255, 0, 0, 1); /* Full red on hover */
+  background-color: rgba(255, 0, 0, 0.2);
+  transform: scale(1.2);
+  box-shadow: 0 4px 10px rgba(255, 0, 0, 0.5);
+}
+
+/* Unique edit button styling */
+.category-card .icon-btn.edit-btn {
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  color: rgba(0, 0, 255, 0.8); /* Blue for edit */
+  padding: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.category-card .icon-btn.edit-btn:hover {
+  color: rgba(0, 0, 255, 1); /* Full blue on hover */
+  background-color: rgba(0, 0, 255, 0.2);
+  transform: scale(1.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 255, 0.5);
+}
+/* General icon button styles */
+.icon-btn {
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  margin: 0 5px;
+  border-radius: 8px; /* Rounded corners for icon buttons */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Container for the table */
+.table-container {
+  width: 100%;
+  max-height: 400px; /* Set a max height for scrolling */
+  overflow-y: auto; /* Allow vertical scrolling */
+  margin: 20px 0;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  background-color: #1c1c1e; /* Dark background */
+}
+
+/* Custom Scrollbar Styles */
+.table-container::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+.table-container::-webkit-scrollbar-track {
+  background: #2c2c2e; /* Dark background for the track */
+  border-radius: 10px; /* Rounded edges for the track */
+}
+
+.table-container::-webkit-scrollbar-thumb {
+  background: #1a1a1a; /* Dark color for the scrollbar thumb */
+  border-radius: 10px; /* Rounded edges for the thumb */
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+  background: #444; /* Darker shade on hover */
+}
+
+/* Styling the table */
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+  color: #e8e8e8; /* Light text for contrast */
+  background-color: #2c2c2e; /* Slightly lighter dark background */
+}
+
+/* Table header styling */
+.styled-table thead {
+  background: linear-gradient(90deg, #1a1a1a, #3a3a3a); /* Dark gradient */
+  color: #ffffff;
+}
+
+.styled-table th {
+  padding: 16px 20px;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Alternating row colors */
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #3a3a3a; /* Darker gray for even rows */
+}
+
+.styled-table tbody tr:nth-of-type(odd) {
+  background-color: #4a4a4a; /* Lighter gray for odd rows */
+}
+
+/* Row hover effect */
+.styled-table tbody tr:hover {
+  background-color: #5a5a5a; /* Highlight color on hover */
+}
+
+/* Column styles */
+.styled-table tbody td {
+  padding: 14px 20px;
+  text-align: center;
+  border-bottom: 2px solid #5a5a5a; /* Border between rows */
+  font-weight: 600; /* Bold text */
+}
+
+/* Action column style */
+.styled-table tbody td:last-child {
+  background-color: #2c2c2e; /* Same as container for consistency */
+}
+
+/* Icon button styling */
+.table-btn-container {
+  display: flex; /* Use flexbox for better alignment */
+  justify-content: center; /* Center the buttons */
+  gap: 10px; /* Space between buttons */
+}
+
+/* Button base styling */
+.icon-btn {
+  padding: 8px 12px;
+  border-radius: 5px; /* Slightly rounded corners */
+  transition: all 0.3s ease;
+  font-weight: bold; /* Bold text for buttons */
+}
+
+/* Edit button with blue color */
+.table-edit-btn {
+  background-color: #1a73e8; /* Blue for edit */
+  color: #ffffff; /* White text */
+}
+
+.table-edit-btn:hover {
+  background-color: #1c86f2; /* Slightly darker blue on hover */
+  transform: translateY(-2px); /* Lift effect */
+}
+
+/* Delete button with red color */
+.table-delete-btn {
+  background-color: #d93025; /* Red for delete */
+  color: #ffffff; /* White text */
+}
+
+.table-delete-btn:hover {
+  background-color: #e03e30; /* Slightly darker red on hover */
+  transform: translateY(-2px); /* Lift effect */
+}
+
+/* Profile image styling */
+.styled-table img {
+  border-radius: 50%; /* Circular profile images */
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+
+/* Adding rounded corners to the whole table */
+.styled-table {
+  border-radius: 8px;
+}
+
+/* Adding smooth transitions to table elements */
+.styled-table,
+.styled-table th,
+.styled-table td {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.view-toggle-button {
+  background-color: #007bff; /* Button color */
+  color: white; /* Text color */
+  padding: 10px 20px; /* Padding */
+  border: none; /* Remove border */
+  border-radius: 25px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  display: flex; /* Flexbox for alignment */
+  align-items: center; /* Center items vertically */
+  transition: background-color 0.3s ease; /* Smooth background transition */
+  font-size: 16px; /* Font size */
+}
+
+.view-toggle-button:hover {
+  background-color: #0056b3; /* Darker color on hover */
+}
+
+.curved-arrow-icon {
+  width: 20px; /* Set a width for the image */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Space between icon and text */
+  transition: transform 0.3s ease; /* Smooth icon transition */
+}
+
+/* Optional: Add a rotating effect when toggled */
+.rotate-left {
+  transform: rotate(180deg); /* Rotate left */
+}
+
+.rotate-right {
+  transform: rotate(0deg); /* No rotation */
+}
+
+/* Existing Success Message Style */
+.success-message {
+  display: flex;
+  align-items: center;
+  background-color: #d4edda; /* Light green background */
+  color: #155724; /* Dark green text */
+  border: 1px solid #c3e6cb; /* Green border */
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Fade-Out Animation */
+.success-message.fade-out {
+  opacity: 0;
+}
+
+/* Success Icon Style */
+.success-icon {
+  margin-right: 10px;
+}
+
+/* New Delete Success Message Style */
+.delete-success-message {
+  display: flex;
+  align-items: center;
+  background-color: #f8d7da; /* Light red background */
+  color: #721c24; /* Dark red text */
+  border: 1px solid #f5c6cb; /* Red border */
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Fade-Out Animation for Delete */
+.delete-success-message.fade-out {
+  opacity: 0;
+}
+
+/* Delete Icon Style */
+.delete-icon {
+  margin-right: 10px;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: auto;
+}

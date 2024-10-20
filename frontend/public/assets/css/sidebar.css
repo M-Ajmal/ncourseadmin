@@ -1,0 +1,124 @@
+.sidebar {
+  height: 100%;
+  background-color: #22675d; /* Solid dark color for the sidebar */
+  padding: var(--third-padding);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5); /* Darker shadow for depth */
+  position: relative;
+  transition: transform 0.45s, background 0.5s; /* Transition for background */
+}
+
+@media (max-width: 767px) {
+  .sidebar {
+      z-index: 1000;
+      transform: translateX(-220px);
+  }
+}
+
+.sidebar .brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 var(--secondary-margin);
+  position: relative;
+  transition: transform 0.3s; /* Animation for the logo */
+}
+
+.sidebar .brand:hover {
+  transform: scale(1.1); /* Slightly enlarge the logo on hover */
+}
+
+.sidebar .brand h3 {
+  color: #FFFFFF; /* White for brand text */
+  font-size: 1.5rem; /* Increase font size for visibility */
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.7); /* Stronger shadow for depth */
+}
+
+.sidebar .brand i {
+  position: absolute;
+  left: 0;
+  cursor: pointer;
+  transition: color 0.3s; /* Color transition for the icon */
+  color: #FFC107; /* Golden color for the icon */
+}
+
+.sidebar .brand::before {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  width: 80px;
+  height: 2px;
+  background-color: #1B3A25; /* Darker green for the line */
+}
+
+.sidebar .brand::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  background-color: #1B3A25; /* Darker green for the dot */
+  width: 12px;
+  height: 12px;
+  border-radius: 50%; /* Make it circular */
+}
+
+.sidebar ul {
+  list-style: none;
+  flex: 1; /* Allow sidebar items to expand */
+  padding: 0;
+  margin: 0; /* Remove default margin */
+}
+
+.sidebar ul li {
+  position: relative; /* Positioning for hover effects */
+}
+
+.sidebar ul li a {
+  display: flex;
+  align-items: center;
+  font-weight: 500; /* Slightly reduce font weight */
+  font-size: 0.9rem; /* Reduced font size */
+  padding: 12px; /* Reduced padding */
+  margin: 4px 0; /* Slightly decreased vertical margin */
+  text-decoration: none;
+  color: #FFFFFF;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+  background-color: #FFC107; /* Golden background on hover */
+  color: #1B3A25; /* Dark green text on hover */
+}
+
+.sidebar ul li a i {
+  margin-right: 15px; /* Increased margin for better spacing */
+  transition: color 0.3s; /* Transition for icon color */
+}
+
+.sidebar ul li a:hover i {
+  color: #1B3A25; /* Dark green for icon on hover */
+}
+
+.sidebar ul li::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.2); /* Light divider line */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s; /* Fade effect */
+}
+
+.sidebar ul li:hover::after {
+  opacity: 1; /* Show divider on hover */
+}
+
+@media (max-width: 767px) {
+  .sidebar ul li a i {
+      font-size: 1.5rem; /* Increase icon size on mobile */
+  }
+}

@@ -1,0 +1,64 @@
+.header .profile .bell {
+    position: relative;
+  }
+  .header .profile .bell::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    right: -4px;
+    width: 10px;
+    height: 10px;
+    background-color: var(--red-color);
+    border-radius: var(--main-radius);
+    -webkit-border-radius: var(--main-radius);
+    -moz-border-radius: var(--main-radius);
+    -ms-border-radius: var(--main-radius);
+    -o-border-radius: var(--main-radius);
+  }
+  .header .profile img {
+    max-width: 100%;
+    width: 35px;
+  }
+  
+  .profile {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 40px; 
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .dropdown.show {
+    display: block;
+  }
+  
+  .email {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #333;
+  }
+  
+  .logout-button {
+    background-color: #f44336; 
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-top: 5px;
+  }
+  
+  .logout-button:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+  }
+  

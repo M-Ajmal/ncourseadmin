@@ -1,0 +1,301 @@
+/* StdManagement.css */
+
+/* General Styling */
+.main-content {
+    padding: 20px;
+    background-color: #f0f8ff;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Header Section */
+  .title h1 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+/* Round Icon Button Styling */
+.add-icon-button {
+    position: absolute; /* Position the button relative to the main-content */
+    top: 20px; /* Distance from the top of main-content */
+    right: 20px; /* Distance from the right side of main-content */
+    width: 50px; /* Increase width for larger button */
+    height: 50px; /* Increase height for larger button */
+    border-radius: 50%; /* Make it a circle */
+    background-color: #4caf50; /* Green background */
+    color: white; /* White icon color */
+    border: none; /* Remove border */
+    cursor: pointer; /* Pointer cursor on hover */
+    display: flex; /* Center align icon */
+    align-items: center; /* Vertical centering */
+    justify-content: center; /* Horizontal centering */
+    font-size: 28px; /* Increase font size for larger icon */
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+  }
+  
+  .add-icon-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+  }
+  
+  .add-icon-button:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Slight shadow for focus */
+  }
+  
+  
+  .add-edit-container {
+    position: fixed;
+    right: -400px;
+    top: 0;
+    width: 400px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0px 10px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease-in-out;
+    padding: 20px;
+  }
+  
+  .add-edit-container.visible {
+    right: 0;
+  }
+  
+  /* Add/Edit Form Styling */
+  .add-edit-form {
+    padding: 20px;
+    background-color: #ffffff; /* White background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 400px; /* Limit the width */
+    margin: auto; /* Center horizontally */
+  }  
+
+  /* Header Styling */
+  .form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px; /* Space below header */
+  }
+  
+  .form-header h2 {
+    color: #4CAF50; /* Header color */
+  }
+
+  /* Spacing */
+  .form-spacing {
+    height: 15px; /* Space between header and inputs */
+  }
+
+/* Input Styling */
+.styled-input {
+  width: 100%; /* Full width */
+  padding: 10px;
+  margin: 10px 0; /* Space around inputs */
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 5px; /* Rounded corners */
+  transition: border-color 0.3s ease;
+}
+
+.styled-input:focus {
+  border-color: #4CAF50; /* Green border on focus */
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.3); /* Glow effect */
+}
+  
+ /* Form Buttons */
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px; /* Space above buttons */
+  }
+  
+  .submit-button, .cancel-button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-button {
+    background-color: #4CAF50; /* Green background */
+  }
+  
+  .submit-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+  }
+  
+  
+  .cancel-button {
+    background-color: #f44336;
+  }
+  
+  .cancel-button:hover {
+    background-color: #e53935;
+  }
+  
+  .Std-box-card-footer-buttons {
+    display: flex;
+    justify-content: space-between; /* Space between buttons */
+    margin-top: 10px; /* Add some spacing above the buttons */
+}
+
+.edit-button {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 5px 10px; /* Padding for the button */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Smooth transition */
+    margin-left: 10px; /* Space between Remove and Edit buttons */
+    font-weight: bold; /* Make text bold */
+}
+
+.edit-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Style for Remove link */
+.Std-box-card-footer-buttons a {
+    text-decoration: none; /* Remove underline */
+    color: #f44336; /* Red color */
+    font-weight: bold; /* Bold text */
+}
+.input-container {
+    position: relative; /* Enable absolute positioning for children */
+  }
+  
+  .styled-input {
+    padding-right: 40px; /* Ensure there's space for the button */
+  }
+  
+  .show-password-button,
+  .generate-password-button,
+  .generate-username-button {
+    position: absolute; /* Absolute positioning */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Center the button */
+    background: transparent; /* No background */
+    border: none; /* Remove border */
+    cursor: pointer; /* Pointer cursor for interactivity */
+    outline: none; /* Remove outline */
+    color: #888; /* Color of the icon */
+  }
+  
+  .show-password-button {
+    right: 40px; /* Position for the show password button */
+  }
+  
+  .generate-password-button {
+    right: 10px; /* Position for the generate password button */
+  }
+  
+  .generate-username-button {
+    right: 10px; /* Position for the generate username button */
+  }
+  
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+  
+
+
+
+  .course-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+    width: 80%;
+    max-width: 600px;
+  }
+  
+  .course-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .course-table th, .course-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .course-table th {
+    background-color: #f4f4f4;
+  }
+  
+
+  
+  .close-button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .close-button:hover {
+    background-color: #c82333;
+  }
+  .show-table-button {
+    display: flex; /* Enable flexbox */
+    align-items: center; /* Center items vertically */
+    background-color: #672b00; /* Initial background color */
+    color: #fff; /* Text color */
+    padding: 10px 20px; /* Adjust padding */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 50px;
+    transition: background-color 0.3s ease; /* Smooth transition */
+  }
+  
+  .show-table-button:hover {
+    background-color: #4c1a00; /* Color on hover */
+  }
+  
+  .show-table-button svg {
+    margin-right: 8px; /* Add space between icon and text */
+  }
+
+  /* Add this CSS to your styles */
+
+.course-table {
+  width: 100%; /* Ensure the table uses the full width of its container */
+  border-collapse: collapse; /* Collapse borders for a cleaner look */
+  table-layout: fixed; /* Set a fixed layout */
+}
+
+.course-table th,
+.course-table td {
+  padding: 12px; /* Add padding for better spacing */
+  text-align: left; /* Align text to the left */
+  border: 1px solid #ddd; /* Add border for better visibility */
+}
+
+.course-table th {
+  background-color: #f2f2f2; /* Light background for headers */
+  font-weight: bold; /* Make headers bold */
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide overflow */
+}
+
+.course-table td {
+  overflow: hidden; /* Hide overflow for table cells */
+  text-overflow: ellipsis; /* Show ellipsis for long text */
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+    
